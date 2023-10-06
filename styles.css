@@ -53,14 +53,14 @@
 }
 
 .seccion-uno .pUno{
-    font-size: 100px;
+    font-size: 80px;
     color:white;
     display:flex;
     justify-content: center;
     align-items:center;
 }
 .seccion-uno .pDos{
-    font-size: 60px;
+    font-size: 40px;
     color:white;
     display:flex;
     justify-content: center;
