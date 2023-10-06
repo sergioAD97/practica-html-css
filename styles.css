@@ -1,11 +1,13 @@
 *{
     margin: 0;
-
+    padding: 0;
+    box-sizing: content-box;
 }
 
+   /*Aquí comienza el Header de la pagina*/
 .header{
     width: 100%;
-    height: 5vh;
+    height: 7vh;
     background-color: #191919;
     display: flex;
     align-items: center;
@@ -32,50 +34,60 @@
     font-weight: 600;
 }
 
+.header .nav-mobile{
+    display:none;
+}
+ /*Aquí comienza la sección uno de la pagina*/
 .seccion-uno {
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img.jpg);
     background-position: center;
     background-size: cover;
     width:100%;
-    min-height: 70vh;
+    min-height: 90vh;
     display:flex;
     flex-direction:column;
     justify-content: center;
     align-items:center;
-    gap: 30px;
+    gap: 15px;
+    
 }
 
-.seccion-uno h1{
+.seccion-uno .pUno{
     font-size: 100px;
-    color:white
+    color:white;
+    display:flex;
+    justify-content: center;
+    align-items:center;
 }
-.seccion-uno h3{
+.seccion-uno .pDos{
     font-size: 60px;
     color:white;
+    display:flex;
+    justify-content: center;
+    align-items:center;
 }
 
 .seccion-uno a {
-    width: 100px;
-    height: 35px;
+
     border: 2px solid orange;
     background-color: orange;
     border-radius: 5px;
-    display:flex;
-    justify-content: center;
-    align-items: center;
+    padding: 10px;
     color: white;
     text-decoration: none;
     font-weight: 900;
 }
+/*Aquí termina la sección uno de la pagina*/
 
+/*Aquí comienza la sección dos de la pagina*/
 .seccion-dos{
-    width: 100%;
-    min-height: 50vh;
-    padding: 30px;
+   
+    padding: 40px 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    
     gap: 20px;
     background-color:white;
 
@@ -91,7 +103,17 @@
     text-align: center;
     gap:10px;  
 }
-.seccion-dos .card{
+
+.seccion-dos .espacioUno {
+    width: 100%;
+    min-height: 40vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+.seccion-dos .espacioUno .card{
     width: 300px;
     height: 350px;
     /*border: 2px solid black;*/
@@ -109,18 +131,16 @@
     border-radius: 50%;
 }
 
+/*Aquí comienza la sección tres de la pagina*/
+
 .seccion-tres{
-    width: 100%;
-    min-height: 40vh;
-    padding: 30px;
+    padding: 40px 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 50px;
-    row-gap: 1px;
-    background-color:gray;
+    gap: 20px;
+    background-color:gray;;
 
 }
 
@@ -135,6 +155,20 @@
     gap:10px;  
     padding-bottom: 30px;
 }
+.seccion-tres .espacioDos{
+    width: 100%;
+    min-height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px;
+    row-gap: 1px;
+   
+
+}
+
 .seccion-tres .cartas{
     
     width: 350px;
@@ -155,18 +189,22 @@
    
 }
 
+/*Aquí termina la sección tres de la pagina*/
+
+/*Aquí comienza la sección cuatro de la pagina*/
+
 .seccion-cuatro{
-    width: 100%;
-    min-height: 50vh;
-    padding: 30px;
+    padding: 40px 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 50px;
-    background-color:gray;
+    gap: 20px;
+    background-color:gray;;
 
 }
+
+
 
 .seccion-cuatro .titulotres{
     width: 100%;
@@ -179,9 +217,21 @@
     gap:10px;  
     margin-bottom: 40px;
 }
+
+.seccion-cuatro .espacioTres{
+    width: 100%;
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+
+  
+}
 .seccion-cuatro .contactos{
     width: 300px;
-    height: 350px;
+    height: auto;
     /*border: 2px solid black;*/
     text-align: center;
     display:flex;
@@ -197,10 +247,44 @@
     height: 80%;
     border-radius: 50%;
 }
+/*Aquí termina la sección cuatro de la pagina*/
+
+/*Pie de pagína*/
 
 .pie{
     width: 100%;
     background-color: white;
     text-align: center;
-    padding: 20px;
+    display:flex;
+    justify-content: center;
+
 }
+/*Termina pie de pagína*/
+
+/*MediaQueries*/
+@media (width<  950px) {
+    .seccion-uno .pUno {
+        text-align: center;
+        font-size: auto;
+    }
+    .seccion-uno .pDos {
+        text-align:center;
+        font-size: auto;
+    }
+}
+
+@media (width<500px){
+    .header .nav-mobile{
+        display: flex;
+        
+    }
+    .header .nav-mobile img{
+        width: 30px;
+        
+    }
+    .header .nav{
+        display:none;
+        gap:50px;
+    }
+}
+    
